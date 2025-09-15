@@ -7,6 +7,7 @@ const initialState: AuthState = {
   refreshToken: null,
   status: "idle",
   error: null,
+  isAuth: false,
 };
 
 const authSlice = createSlice({
@@ -18,6 +19,7 @@ const authSlice = createSlice({
             state.user = action.payload.user;
             state.token = action.payload.accessToken;
             state.refreshToken = action.payload.refreshToken;
+            state.isAuth = action.payload.isAuth;
         },
         logout: (state) => {
             state.user = null;
@@ -40,5 +42,7 @@ export default authSlice.reducer;
 
 // Selectores
 export const selectCurrentUser = (state: { auth: AuthState }) => state.auth.user;
+export const selectCurrentToken = (state: { auth: AuthState }) => state.auth.token;
+export const selectCurrentRefreshToken = (state: { auth: AuthState }) => state.auth.refreshToken;
 export const selectAuthStatus = (state: { auth: AuthState }) => state.auth.status;
 export const selectAuthError = (state: { auth: AuthState }) => state.auth.error;   

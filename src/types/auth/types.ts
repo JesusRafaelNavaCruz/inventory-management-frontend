@@ -11,6 +11,7 @@ export interface AuthState {
   refreshToken: string | null;
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
+  isAuth: boolean;
 }
 
 export interface LoginPayload {
@@ -22,4 +23,5 @@ export interface AuthResponse {
   user: User;
   accessToken: string;
   refreshToken: string;
+  isAuth: boolean;
 }
