@@ -4,6 +4,9 @@ import ProtectedRoute from "../components/ProtectedRoute";
 import DashboardPage from "../pages/DashboardPage";
 import LocationsPage from "../pages/LocationsPage";
 import Layout from "../components/Layout";
+import WarehousePage from "../pages/WarehousePage";
+import LicensePage from "../pages/LicensePage";
+import MovementsPage from "../pages/MovementsPage";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
           {
             path: "/locations",
             element: <LocationsPage />,
+          },
+          {
+            path: "/warehouse",
+            element: <WarehousePage />,
+          },
+          {
+            path: "/licenses",
+            element: <LicensePage />,
+          },
+          {
+            path: "/movements",
+            element: <MovementsPage />,
           },
           {
             index: true, // Redirige a dashboard cuando se accede a la raíz

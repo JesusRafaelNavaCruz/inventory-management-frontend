@@ -57,9 +57,11 @@ function LoginPage() {
   const handlePwdInput = (e: any) => setPwd(e.target.value);  
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-700 via-indigo-700 to-purple-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-tr from-[#2563eb] via-[#6366f1] to-[#312e81] flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white/10 backdrop-blur-sm p-8 rounded-2xl shadow-xl text-white">
-        <h2 className="text-3xl font-bold text-center mb-6">Inventory Management</h2>
+        <div className="h-32 mb-4 flex justify-center w-full">
+          <img src={`${process.env.PUBLIC_URL}/logo_inventa_pro.png`} alt="InventaPro" className="object-cover w-full h-full" />
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
