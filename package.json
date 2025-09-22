@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.14.0",
     "@reduxjs/toolkit": "^2.8.2",
-    "@table-library/react-table-library": "^4.1.15",
     "@tanstack/react-query": "^5.81.5",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -20,6 +18,7 @@
     "formik": "^2.4.6",
     "lucide-react": "^0.544.0",
     "react": "^19.1.0",
+    "react-data-table-component": "^7.7.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",
     "react-redux": "^9.2.0",

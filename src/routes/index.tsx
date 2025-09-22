@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import WarehousePage from "../pages/WarehousePage";
 import LicensePage from "../pages/LicensePage";
 import MovementsPage from "../pages/MovementsPage";
+import WarehouseFormPage from "../pages/Forms/WarehouseFormPage";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
             path: "/movements",
             element: <MovementsPage />,
           },
+          {
+            path: "/warehouseform",
+            element: <WarehouseFormPage />,
+          },
+
           {
             index: true, // Redirige a dashboard cuando se accede a la raíz
             element: <Navigate to="/dashboard" replace />,
