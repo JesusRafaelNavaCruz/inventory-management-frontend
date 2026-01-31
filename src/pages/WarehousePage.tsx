@@ -3,33 +3,41 @@ import React from "react";
 import Card from "../components/Card";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
+import { warehouseHeaders } from "../utils/headers-tables";
+import { useGetItemQuery, useGetItemsQuery } from "../api/apiItems";
+import { useDispatch, useSelector } from "react-redux";
+import { selectAllItems } from "../slices/item-slice";
 
-const columns = [
-	{
-		name: 'Title',
-		selector: (row:any) => row.title,
-	},
-	{
-		name: 'Year',
-		selector: (row: any) => row.year,
-	},
-];
 
 const data = [
-  	{
-		id: 1,
-		title: 'Beetlejuice',
-		year: '1988',
+  {
+		serialNumber: 111222333,
+		name: 'Taladro Husky',
+		type: 'Herramienta',
+    stock: 2, 
+    actions: ""   
 	},
 	{
-		id: 2,
-		title: 'Ghostbusters',
-		year: '1984',
+		serialNumber: 111222333,
+		name: 'Taladro Husky',
+		type: 'Herramienta',
+    stock: 2, 
+    actions: ""
 	},
 ]
 
 export default function WarehousePage() {
+
+  const dispatch = useDispatch();
+  const items = useSelector(selectAllItems);
+  
+  
+  
   const navigate = useNavigate()
+
+  const headers = warehouseHeaders;
+
+
   
 
   return (
@@ -71,7 +79,7 @@ export default function WarehousePage() {
 
       {/* Datagrid */}
       <Card title="Lista de Articúlos">
-        <DataTable columns={columns} data={data} pagination />
+        <DataTable columns={headers} data={data} pagination />
       </Card>
     </div>
   );
